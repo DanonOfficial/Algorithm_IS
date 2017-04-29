@@ -16,11 +16,9 @@ void dfs(int a) {
             isCycle = true;
         }
         if (color[graph[a][i]] == 0) {
-            //isCycle = false;
             dfs(graph[a][i]);
         }
     }
-    //cout <<"kek" << endl;
     res.push(a);
     color[a] = 2;
 }
@@ -47,7 +45,6 @@ int main() {
     }
 
     topologicalSort();
-   // cout << res.size() << endl;
     if (!isCycle) {
         while(!res.empty()){
             cout << res.top()+1 << " ";
