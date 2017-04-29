@@ -43,7 +43,6 @@ int main() {
             components[i] = current;
             current++;
         }
-        //cout << components[i] << " ";
     }
     cout << current-1
          << endl;
