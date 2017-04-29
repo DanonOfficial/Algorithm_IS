@@ -14,7 +14,6 @@ int main() {
     cin >> n >> m;
     graph.resize(n);
     int from, to;
-    // cout <<graph.size() << endl;
     for (int i = 0; i < m; i++) {
         cin >> from >> to;
         graph[from - 1].push_back(to - 1);
@@ -47,25 +46,6 @@ int main() {
         cout << length[i] << " ";
     }
     cout << endl;
-    /*for(int i = 0; i < n; i++){
-        int min= length[0];
-        int index = 0;
-        for(int j = 0; j < n; j++){
-            if(min > length[j] && length[j] != -1){
-                index = j;
-                min = length[j];
-            }
-        }
-        for(int j = 0; j < graph[index].size(); j++){
-            if(length[graph[index][j]] == -1){
-                length[graph[index][j]] = 1;
-            }
-            else{
-
-            }
-
-        }
-    }*/
 
     return 0;
 }
