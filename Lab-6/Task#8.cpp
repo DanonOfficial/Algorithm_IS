@@ -53,12 +53,10 @@ int main() {
     if(isCycle) {
         cout << "YES" << endl;
         vector<int> res;
-        //res.push_back(startCycle);
         for(int i = endCycle; i != startCycle; i = path[i]){
             res.push_back(i);
         }
         res.push_back(startCycle);
-        //cout << res.size() << endl;
         for(int i = res.size()-1; i>= 0; i--){
             cout << res[i] +1<< " ";
         }
