@@ -36,7 +36,6 @@ int main() {
     }
 
     graph[startI][startJ] = 1;
-    //cout << startI << " " << startJ << endl;
     q.push(make_pair(startI, startJ));
     while (!q.empty()) {
         pair<int, int> temp;
@@ -63,28 +62,6 @@ int main() {
             graph[i + 1][j] = graph[i][j] + 1;
             q.push(make_pair(i + 1, j));
         }
-
-        /*cout << endl;
-        for(int i = 0; i < n; i++){
-            for(int j = 0; j < m; j++){
-                cout << graph[i][j] << " ";
-            }
-            cout << endl;
-        }*/
-    }
-    /*cout << endl;
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < m; j++) {
-            cout << graph[i][j] << " ";
-        }
-        cout << endl;
-    }*/
-    /*for(int i = 0; i < n; i++){
-        for(int j = 0; j < m; j++){
-            cout << graph[i][j] << " ";
-        }
-        cout << endl;
-    }*/
     int i = endI;
     int j = endJ;
     if(graph[i][j] == 0){
@@ -92,8 +69,6 @@ int main() {
         return 0;
     }
     while (graph[i][j] != 1) {
-        //cout << i << " " << j << "  " << graph[i][j] << endl;
-        //cout << graph[i][j] << endl;
         if (i > 0 && graph[i - 1][j] < graph[i][j] && graph[i - 1][j] >0) {
             way += "D";
             i--;
@@ -120,6 +95,5 @@ int main() {
         cout << way[i];
     }
     cout << endl;
-    //std::cout << "Hello, World!" << std::endl;
     return 0;
 }
