@@ -38,12 +38,6 @@ int main() {
             current++;
         }
     }
-    for(int i = 0; i < components.size(); i++){
-        if(components[i] == 0){
-            components[i] = current;
-            current++;
-        }
-    }
     cout << current-1
          << endl;
     for(int i = 0; i < components.size(); i++){
